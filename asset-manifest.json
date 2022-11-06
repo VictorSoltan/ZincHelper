@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/ZincHelper/static/css/main.4d46ce8a.css",
+    "main.js": "/ZincHelper/static/js/main.7133b63f.js",
+    "static/js/787.3a7baf21.chunk.js": "/ZincHelper/static/js/787.3a7baf21.chunk.js",
+    "static/media/info.svg": "/ZincHelper/static/media/info.b304d6bd6d1c49b4e550445aa526a857.svg",
+    "static/media/En.svg": "/ZincHelper/static/media/En.179cf8f5acc8a4a254ef61196e700fa2.svg",
+    "static/media/Pt.svg": "/ZincHelper/static/media/Pt.8feeabf7a6e8ece4d13f1202e7341e1c.svg",
+    "static/media/measure.svg": "/ZincHelper/static/media/measure.346ef1cd5f7ca1654f79b8d776c69dc7.svg",
+    "static/media/Ru.svg": "/ZincHelper/static/media/Ru.00a085aefce07aeb82975dc166895e4a.svg",
+    "static/media/background.png": "/ZincHelper/static/media/background.5ae15de45a446499d4ed.png",
+    "static/media/close.svg": "/ZincHelper/static/media/close.ca30c3906f46f5c80c78c0039b361551.svg",
+    "static/media/sketch.svg": "/ZincHelper/static/media/sketch.7752a726007a42ba375ccc5a99dedbaa.svg",
+    "static/media/folder.svg": "/ZincHelper/static/media/folder.45b7d988967edf2f4f0998500ce9a3fe.svg",
+    "static/media/filter.svg": "/ZincHelper/static/media/filter.a3d1e94c66c5df04d53d86ea13024919.svg",
+    "static/media/logo.svg": "/ZincHelper/static/media/logo.a3ef05fe6f8269ca0295a96985481bf3.svg",
+    "static/media/trapeira_dimens.svg": "/ZincHelper/static/media/trapeira_dimens.53f51bdb686d7210ab7fd59ac6d10e72.svg",
+    "static/media/Frame2.svg": "/ZincHelper/static/media/Frame2.58b17a88155e0fbafd30411633c73ab9.svg",
+    "static/media/Frame3.svg": "/ZincHelper/static/media/Frame3.629cda36ae180b1bbed1c6adb0e67c23.svg",
+    "static/media/trapeira_flat_double.svg": "/ZincHelper/static/media/trapeira_flat_double.b0ccba91b6a84bc3bdc14a8a1b55ee3f.svg",
+    "static/media/trapeira_circle.svg": "/ZincHelper/static/media/trapeira_circle.f255b4b00c5a1b28474858b3a8220463.svg",
+    "index.html": "/ZincHelper/index.html",
+    "static/media/trapeira_flat.svg": "/ZincHelper/static/media/trapeira_flat.640d886ff363c83b9d35af62d1f8bc4c.svg",
+    "static/media/trapeira.svg": "/ZincHelper/static/media/trapeira.80b25d713b05f1382a06206195198e48.svg",
+    "static/media/Frame7.svg": "/ZincHelper/static/media/Frame7.ec40aa429db63066fe38b794f2ff236f.svg",
+    "static/media/grey_v.svg": "/ZincHelper/static/media/grey_v.4bbe28c54ad1eaa6cf85272ea7dd18fe.svg",
+    "static/media/Vector.svg": "/ZincHelper/static/media/Vector.658afda32ad78d955dfcbdbf3dd11398.svg",
+    "static/media/burger1.svg": "/ZincHelper/static/media/burger1.0013527f246fa642afbae15574cc81ca.svg",
+    "static/media/burger3.svg": "/ZincHelper/static/media/burger3.e5e754b58965330944ee15539cd1064d.svg",
+    "static/media/Vector27.svg": "/ZincHelper/static/media/Vector27.cb2690a31dc92980b1eb3588eef94ae3.svg",
+    "static/media/Vector26.svg": "/ZincHelper/static/media/Vector26.90780396b965dc1f8fb57c41d43ee07b.svg",
+    "static/media/burger2.svg": "/ZincHelper/static/media/burger2.55b955c4f574a2c8d17fd80aff19d2ff.svg",
+    "main.4d46ce8a.css.map": "/ZincHelper/static/css/main.4d46ce8a.css.map",
+    "main.7133b63f.js.map": "/ZincHelper/static/js/main.7133b63f.js.map",
+    "787.3a7baf21.chunk.js.map": "/ZincHelper/static/js/787.3a7baf21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d46ce8a.css",
+    "static/js/main.7133b63f.js"
+  ]
+}
