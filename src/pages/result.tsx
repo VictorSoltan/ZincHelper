@@ -18,8 +18,8 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
             console.log(arr)
             let result_page = document.querySelector('.result_page') as any
             result_page.style.display = 'flex'
-            // await onButtonClick()
-            // result_page.style.display = 'none'
+            await onButtonClick()
+            result_page.style.display = 'none'
         }
 
         if(arr.length||arr2.length){
