@@ -31,7 +31,8 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
         [checked1, setChecked1] = useState<boolean>(false),
         [result, setResult] = useState<Array<any>>([]),
         [secondResult, setSecondResult] = useState<Array<any>>([]),
-        [thirdResult, setThirdResult] = useState<Array<number>>([])
+        [thirdResult, setThirdResult] = useState<Array<number>>([]),
+        [middleArr, setMiddleArr] = useState<Array<number>>([])
 
         const
             [roofLength, setRoofLength] = useState<number>(0),
@@ -102,13 +103,19 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
                     height: currentHeight
                 });
             }
-            let newArr = []
-
+            let newArr = [],
+            arrMiddle = [] as Array<number>
         for(let i = 0; i < material.length; i++) {
             let nextHeight = ( (i+1) === material.length) ? material[i].width.toFixed(2) : material[i+1].height.toFixed(2);
             newArr.push({value: material[i].height.toFixed(2), value1: nextHeight})
             console.log(material[i].height.toFixed(2) + ' x ' + nextHeight)
         }
+
+        newArr.forEach((item) => (
+            arrMiddle.push((Number(item.value) + Number(item.value1))/2)
+        ))
+        setMiddleArr(arrMiddle)
+
         setResult(newArr)
         let structUnderlay = structUnderl*2
 
@@ -157,7 +164,7 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
             <button onClick={() => getResults()} className='blue_button'>Result</button>
             {checked0 && <RoofType roofTypeState={checked0} setRoofTypeState={setChecked0} roof_dimensions={roof_dimensions} />}
             {checked1 && <Modal modalState={checked1} setModalState={setChecked1} gutterType={gutterType} setGutterType={setGutterType} gutters_dimensions={gutters_dimensions} />}
-            <Result arr={result} arr2={secondResult} thirdResult={thirdResult} gutterType={gutterType} amount={amount} />
+            <Result arr={result} arr2={secondResult} thirdResult={thirdResult} middleArr={middleArr} gutterType={gutterType} amount={amount} />
         </div>
     )
 }

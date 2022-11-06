@@ -10,8 +10,7 @@ import Frame1 from '../assets/Frame2.svg'
 import Frame2 from '../assets/Frame3.svg'
 
 import '../styles/pages/result.scss'
-export default function SecondStep({arr, arr2, thirdResult, gutterType, amount} : {arr: Array<any>, arr2: Array<any>, thirdResult: Array<number>, gutterType: number, amount: number}){
-    const [middleArr, setMiddleArr] = useState<Array<any>>([])
+export default function SecondStep({arr, arr2, thirdResult, middleArr, gutterType, amount} : {arr: Array<any>, arr2: Array<any>, thirdResult: Array<number>, middleArr: Array<number>, gutterType: number, amount: number}){
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,11 +26,8 @@ export default function SecondStep({arr, arr2, thirdResult, gutterType, amount} 
         }
         let newArr = [] as Array<number>
           
-        arr.forEach((item) => (
-            newArr.push((Number(item.value) + Number(item.value1))/2)
-        ))
 
-        setMiddleArr(newArr)
+        console.log(newArr)
 
     }, [arr])
 
@@ -154,13 +150,13 @@ export default function SecondStep({arr, arr2, thirdResult, gutterType, amount} 
                                     <span className='lists'>
                                         {index === arr2.length-1 ?
                                             <div>
-                                                {Array.from(Array(arr.length-1).keys()).map((item) => (
+                                                {Array.from(Array((arr.length-1)*amount).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
                                             </div> 
                                         :
                                             <div>
-                                                {Array.from(Array(1).keys()).map((item) => (
+                                                {Array.from(Array(1*amount).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
                                             </div>                              
@@ -170,7 +166,7 @@ export default function SecondStep({arr, arr2, thirdResult, gutterType, amount} 
                             ))}
                         </section>
                         <footer>
-                            Total: {arr2[0]*arr.length}
+                            Total: {(arr2[0]*arr.length)*amount}
                         </footer>
                     </div>            
                 </>
