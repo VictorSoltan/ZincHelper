@@ -33,7 +33,7 @@ export default function RoofType({roofTypeState, setRoofTypeState, roof_dimensio
                     {roof_dimensions.map((item, index) => (
                         <span key={index}>
                             <h3>{item.name}</h3>
-                            <DemensionInput numb={item.value} setNumb={item.setValue} />
+                            <DemensionInput label={true} numb={item.value} setNumb={item.setValue} />
                         </span>
                     ))}
                 </div>

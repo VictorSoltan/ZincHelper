@@ -6,22 +6,33 @@ import Vector0 from '../assets/result/Vector26.svg'
 import Vector1 from '../assets/result/Vector27.svg'
 // import { toPng } from 'html-to-image';
 import html2canvas from "html2canvas";
+import Frame1 from '../assets/Frame2.svg'
+import Frame2 from '../assets/Frame3.svg'
 
 import '../styles/pages/result.scss'
-export default function SecondStep({arr, arr2} : {arr: Array<any>, arr2: Array<any>}){
+export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array<any>, arr2: Array<any>, gutterType: number, amount: number}){
+    const [middleArr, setMiddleArr] = useState<Array<any>>([])
 
     useEffect(() => {
         const fetchData = async () => {
             console.log(arr)
             let result_page = document.querySelector('.result_page') as any
             result_page.style.display = 'flex'
-            await onButtonClick()
-            result_page.style.display = 'none'
+            // await onButtonClick()
+            // result_page.style.display = 'none'
         }
 
         if(arr.length||arr2.length){
             fetchData()
         }
+        let newArr = [] as Array<number>
+          
+        arr.forEach((item) => (
+            newArr.push((Number(item.value) + Number(item.value1))/2)
+        ))
+
+        setMiddleArr(newArr)
+
     }, [arr])
 
     const 
@@ -63,92 +74,113 @@ export default function SecondStep({arr, arr2} : {arr: Array<any>, arr2: Array<a
                     a.setAttribute('href', image);
                     a.click();
         }              )
-          }, [ref])     
+    }, [ref])     
 
+    
     return(
         <div className="result_page" ref={ref} style={{ backgroundImage: `url(${Background})` }}>
-            <h1>Trapeira № 1</h1>
-            <div className='stats'>
-                <header>
-                    <h2>Lateral</h2>
-                    <h2>lado</h2>
-                    <h2>Quantidade</h2>
-                </header>
-                <section>
-                    {arr.map((item, index) => (
-                        <div className='item' key={index} style={{background: index%2===0 ? '#F7EBEB' : 'rgba(125, 170, 211, 0.5)' }}>
-                            <span className='values'>
-                                <div>
-                                    <h6>№{index+1}  :</h6>
-                                    <h6>{item.value + ' x ' + item.value1 }</h6>
+            {arr.length && 
+                <>
+                    <h1>Trapeira № 1</h1>
+                    <div className='stats'>
+                        <header>
+                            <h2>Lateral</h2>
+                            <h2>lado</h2>
+                            <h2>Quantidade</h2>
+                        </header>
+                        <section>
+                            {arr.map((item, index) => (
+                                <div className='item' key={index} style={{background: index%2===0 ? '#F7EBEB' : 'rgba(125, 170, 211, 0.5)' }}>
+                                    <span className='values'>
+                                        <div>
+                                            <h6>№{index+1}  :</h6>
+                                            <h6>{item.value + ' x ' + item.value1 }</h6>
+                                        </div>
+                                        <img src={index === 0 ? Vector0 : Vector1} alt="" />
+                                    </span>
+                                    <span className='names'>
+                                        <h3>Esquerda</h3>
+                                        <h3>Direita</h3>
+                                    </span>
+                                    <span className='lists'>
+                                        <div>
+                                            {Array.from(Array(arr.length).keys()).map((item) => (
+                                                <h6 key={item}>{item + 1}</h6>
+                                            ))}
+                                        </div>
+                                        <div>
+                                            {Array.from(Array(arr.length).keys()).map((item) => (
+                                                <h6 key={item}>{item  + 1}</h6>
+                                            ))}                                    
+                                        </div>
+                                    </span>
                                 </div>
-                                <img src={index === 0 ? Vector0 : Vector1} alt="" />
-                            </span>
-                            <span className='names'>
-                                <h3>Esquerda</h3>
-                                <h3>Direita</h3>
-                            </span>
-                            <span className='lists'>
-                                <div>
-                                    {Array.from(Array(arr.length).keys()).map((item, index) => (
-                                        <h6>{index}</h6>
-                                    ))}
+                            ))}
+                        </section>
+                        <footer>
+                            Total: {(middleArr.reduce((partialSum, a) => partialSum + Number(a), 0) / arr.length).toFixed(2)}
+                        </footer>
+                    </div>
+                </>
+            }
+            {arr2.length &&
+                <>
+                    <h1>Telhado das trapeiras   № 1</h1>
+                    <div className='stats2'>
+                        <header>
+                            <h2>Lateral</h2>
+                            <h2>Quantidade</h2>
+                        </header>
+                        <section>
+                            {arr2.map((item, index) => (
+                                <div className='item' key={index} style={{background: index%2===0 ? '#F7EBEB' : 'rgba(125, 170, 211, 0.5)' }}>
+                                    <span className='values'>
+                                        {item.length ?
+                                        <div className='gutter'>
+                                            <div>
+                                                <h6>2 x</h6>
+                                                {item.map((el: number, index: number) => (
+                                                    <h6 key={index}>&nbsp;{el + ' x '}</h6>
+                                                ))}
+                                                <h6>&nbsp;2</h6>
+                                            </div>
+                                            <img src={gutterType === 0 ? Frame1 : Frame2} alt="" />
+                                        </div>
+                                        : <>
+                                            <h6>{item}</h6>
+                                            <img src={index === 0 ? Vector0 : Vector1} alt="" />
+                                        </>}
+                                    </span>
+                                    <span className='lists'>
+                                        {index === 1 ?
+                                            <div>
+                                                {Array.from(Array(arr.length + arr.length*(amount-1)).keys()).map((item) => (
+                                                    <h6 key={item}>{item + 1}</h6>
+                                                ))}
+                                            </div> :
+                                        <>
+                                            <div>
+                                                {Array.from(Array(arr.length).keys()).map((item) => (
+                                                    <h6 key={item}>{item + 1}</h6>
+                                                ))}
+                                            </div>
+                                            <div>
+                                                {Array.from(Array(arr.length).keys()).map((item) => (
+                                                    <h6 key={item}>{item + 1}</h6>
+                                                ))}                                    
+                                            </div>                                
+                                        </>}
+                                    </span>
                                 </div>
-                                <div>
-                                    {Array.from(Array(arr.length).keys()).map((item, index) => (
-                                        <h6>{index}</h6>
-                                    ))}                                    
-                                </div>
-                            </span>
-                        </div>
-                    ))}
-                </section>
-                <footer>
-                    Total: {(arr.reduce((partialSum, a) => partialSum + Number(a.value) + Number(a.value1), 0) / arr.length).toFixed(2)}
-                </footer>
-            </div>
-            <h1>Telhado das trapeiras   № 1</h1>
-            <div className='stats2'>
-                <header>
-                    <h2>Lateral</h2>
-                    <h2>Quantidade</h2>
-                </header>
-                <section>
-                    {arr2.map((item, index) => (
-                        <div className='item' key={index} style={{background: index%2===0 ? '#F7EBEB' : 'rgba(125, 170, 211, 0.5)' }}>
-                            <span className='values'>
-                                <h6>{item}</h6>
-                                <img src={index === 0 ? Vector0 : Vector1} alt="" />
-                            </span>
-                            <span className='lists'>
-                                {arr2.length-1 === index ?
-                                    <div>
-                                        {Array.from(Array(arr.length*6).keys()).map((item, index) => (
-                                            <h6>{index}</h6>
-                                        ))}
-                                    </div> :
-                                <>
-                                    <div>
-                                        {Array.from(Array(arr.length).keys()).map((item, index) => (
-                                            <h6>{index}</h6>
-                                        ))}
-                                    </div>
-                                    <div>
-                                        {Array.from(Array(arr.length).keys()).map((item, index) => (
-                                            <h6>{index}</h6>
-                                        ))}                                    
-                                    </div>                                
-                                </>}
-                            </span>
-                        </div>
-                    ))}
-                </section>
-                <footer>
-                    Total: 
-                </footer>
-            </div>            
+                            ))}
+                        </section>
+                        <footer>
+                            Total: {arr2[0]*arr.length}
+                        </footer>
+                    </div>            
+                </>
+            }
             <img src={Logo} alt="Logo" className='logo' />
-            {/* <button onClick={() => onButtonClick()}>Click me</button>             */}
         </div>
     )
 }

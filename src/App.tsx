@@ -14,8 +14,6 @@ import Menu from './components/menu'
 
 import Background from './assets/background.png'
 
-import Result from './pages/result'
-
 
 function App() {
 
@@ -25,8 +23,6 @@ function App() {
 
   return (
     <div className="App" style={{ backgroundImage: `url(${Background})` }}>
-      {/* <Result /> */}
-      
       <Header seMenuState={seMenuState}/>
       <Routes>
         <Route path="/ZincHelper" element={<FirstStep structUnderl={structUnderl} setStructUnderl={setStructUnderl} />} /> 

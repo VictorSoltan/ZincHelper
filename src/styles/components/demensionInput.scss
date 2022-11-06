@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 93px;
     height: 18px;
-    .input{
+    .input, .naked_input{
         display: flex;
         align-items: center;
         color: #7B7B7B;
@@ -25,7 +25,13 @@
             color: #7B7B7B;
         }
     }
-
+    .naked_input{
+        padding-right: 0px;
+        width: calc(50% + 6px);
+        input{
+            width: 100%;
+        }
+    }
     button{
         display: flex;
         justify-content: center;

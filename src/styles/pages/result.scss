@@ -11,7 +11,7 @@
     background: white;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -9999;
+    z-index: 9999;
     h1{
         text-align: left;
         width: 612px;
@@ -74,7 +74,7 @@
                         align-items: center;
                         justify-content: space-between;
                         width: 82%;
-                        margin-left: -10%;
+                        margin-left: -8%;
                     }
                     h6{
                         margin: 0;
@@ -150,6 +150,23 @@
                 }   
             }
         }        
+        .values{
+            
+            .gutter{
+                align-items: center;
+                // align-self: f;
+                // margin
+                div{
+                    margin-top: 0px;
+                    margin-left: 45px !important;
+                }
+                img{
+                    width: 50px;
+                    margin-top: 0px;
+                    margin-left: -16px;
+                }
+            }
+        }
         .lists{
             margin-left: 60px;
         }

@@ -31,15 +31,15 @@ export default function Modal({modalState, setModalState, gutterType, setGutterT
                 </div>
                 <div className='dimensions'>
                     {gutters_dimensions.map((item, index) => (
-                            gutterType === 1&&index !== 3 ?
+                        gutterType === 1&&index !== 3 ?
                             <span key={index}>
                                 {item.name}
-                                <DemensionInput numb={item.value} setNumb={item.setValue} />
-                            </span> :
-                            gutterType === 0 &&
+                                <DemensionInput label={true} numb={item.value} setNumb={item.setValue} />
+                            </span> 
+                        : gutterType === 0 &&
                             <span key={index}>
                                 {item.name}
-                                <DemensionInput numb={item.value} setNumb={item.setValue} />
+                                <DemensionInput label={true} numb={item.value} setNumb={item.setValue} />
                             </span>
                     ))}
                 </div>
