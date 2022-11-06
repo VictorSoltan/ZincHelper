@@ -1,0 +1,64 @@
+.roof_type_component{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    .background{
+        position: absolute;
+        top: 0;
+        backdrop-filter: blur(4px);
+        min-height: 100vh;
+        width: 100vw;        
+    }
+    section{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        border: 2px solid #7EC4FD;
+        border-radius: 10px;   
+        height: calc(322px - 47px);
+        padding: 20px 23px 27px;
+        .close{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            cursor: pointer;
+        }
+        .frames{
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 276px;
+            margin: 6% auto;
+            .select_component{
+                width: 28%;
+            }
+        }
+        .dimensions{
+            margin: 5% auto 6%;
+            span{
+                display: flex;
+                align-items: center;
+                margin: 3% 0;
+                font-family: 'Roboto';
+                font-style: normal;
+                h3{
+                    width: 90px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 15px;  
+                    margin: 0; 
+                }             
+            }
+        }
+        .blue_button{
+            margin: 0 auto;
+            width: 148px;
+            height: 40px;            
+        }
+    }
+}

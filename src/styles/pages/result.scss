@@ -1,0 +1,162 @@
+.result_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    min-width: 722px;
+    min-height: calc(1127px - 66px);
+    padding: 32px 0 34px;
+    background: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -9999;
+    h1{
+        text-align: left;
+        width: 612px;
+        height: 0px;
+        left: 54px;
+        top: 66px;
+        padding-left: 30px;
+        margin: 0 30px;
+        padding-bottom: 30px;
+        border-bottom: 3px solid #000000;
+    }
+    .stats, .stats2{
+        width: 473px;
+        margin: 35px 0;
+        header{
+            display: flex;
+            align-items: center;
+            width: 481px;
+            height: 33.3px;
+            background: rgba(125, 170, 211, 0.5);
+
+            h2{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;   
+                &:nth-child(1){
+                    padding-left: 10px;
+                }
+                &:nth-child(2){
+                    padding-left: 132px;
+                }   
+                &:nth-child(3){
+                    padding-left: 45px;
+                }                                     
+            }
+        }
+        section{
+            width: 100%;
+            .item{
+                display: flex;
+                align-items: center;                    
+                padding: 6px 12px;
+                width: calc(100% - 16px);                
+                span{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                                   
+                    img{
+                        position: absolute;
+                        margin-top: 10px;
+                    }
+                }
+                .values{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 82%;
+                        margin-left: -10%;
+                    }
+                    h6{
+                        margin: 0;
+                        // margin-left: -20px;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 13px;
+                        line-height: 15px;
+                        white-space: nowrap;
+                    }
+                    width: 160px;
+                }
+                .names{
+                    width: 80px;
+                    align-items: flex-start;
+                    padding-left: 20px;
+                    h3{
+                        margin: 4px 0;
+                    }
+                }
+                .lists{
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    width: 200px;
+                    // max-width: 300px;
+                    div{
+                        display: flex;
+                    flex-wrap: wrap;
+                    margin-right: -4px;
+                        h6{
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 12px;
+                            
+                            margin: 4px 2px;
+
+                            width: 15px;
+                            height: 15px;
+                            background: #FFFFFF;
+                            color: #BCBCBC;
+                            border: 1.3px solid #000000;                                
+                        }
+                    }
+                }                     
+            }
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F1C8C8;
+            width: 481px;
+            height: 56.81px;
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;                                    
+        }
+    }
+    .stats2{
+        header{
+            h2{
+                &:nth-child(2){
+                    padding-left: 224px;
+                }   
+            }
+        }        
+        .lists{
+            margin-left: 60px;
+        }
+    }
+
+    .logo{
+        position: absolute;
+        bottom: 34px;
+    }
+}

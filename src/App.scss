@@ -1,0 +1,65 @@
+.App{
+    min-height: 100vh;
+    background-size: 100vw 100%;
+    background-position: bottom;
+    h1{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        margin: 0;
+        color: #2C2C2C;
+    }
+    h2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        margin: 0;
+        color: #2C2C2C;    
+        span{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+                    
+            color: #2C2C2C;
+        }    
+    }
+    h3{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;        
+    }
+    .blue_label{
+        color: #7ec4fd;    
+    }
+
+    .blue_button{
+        text-decoration: none;
+        width: 148px;
+        height: 40px;        
+        background: #2A9DFC;
+        color: white;    
+        cursor: pointer;
+        /* display: flex; */
+        border: 1px solid #4A97DE;
+        border-radius: 5px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
