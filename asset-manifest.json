@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ZincHelper/static/css/main.a911e253.css",
-    "main.js": "/ZincHelper/static/js/main.2fc16cd0.js",
+    "main.css": "/ZincHelper/static/css/main.679a7ef3.css",
+    "main.js": "/ZincHelper/static/js/main.83042ab7.js",
     "static/js/787.3a7baf21.chunk.js": "/ZincHelper/static/js/787.3a7baf21.chunk.js",
     "static/media/info.svg": "/ZincHelper/static/media/info.b304d6bd6d1c49b4e550445aa526a857.svg",
     "static/media/En.svg": "/ZincHelper/static/media/En.179cf8f5acc8a4a254ef61196e700fa2.svg",
@@ -30,12 +30,12 @@
     "static/media/Vector27.svg": "/ZincHelper/static/media/Vector27.cb2690a31dc92980b1eb3588eef94ae3.svg",
     "static/media/Vector26.svg": "/ZincHelper/static/media/Vector26.90780396b965dc1f8fb57c41d43ee07b.svg",
     "static/media/burger2.svg": "/ZincHelper/static/media/burger2.55b955c4f574a2c8d17fd80aff19d2ff.svg",
-    "main.a911e253.css.map": "/ZincHelper/static/css/main.a911e253.css.map",
-    "main.2fc16cd0.js.map": "/ZincHelper/static/js/main.2fc16cd0.js.map",
+    "main.679a7ef3.css.map": "/ZincHelper/static/css/main.679a7ef3.css.map",
+    "main.83042ab7.js.map": "/ZincHelper/static/js/main.83042ab7.js.map",
     "787.3a7baf21.chunk.js.map": "/ZincHelper/static/js/787.3a7baf21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a911e253.css",
-    "static/js/main.2fc16cd0.js"
+    "static/css/main.679a7ef3.css",
+    "static/js/main.83042ab7.js"
   ]
 }
