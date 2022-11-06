@@ -16,16 +16,16 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
         [numbWidth, setNumbWidth] = useState<number>(0),
         [numbWidthFirst, setNumbWidthFirst] = useState<number>(0),
         [numbWidthOther, setNumbWidthOther] = useState<number>(0),
-        [amount, setAmount] = useState<number>(0), 
+        [amount, setAmount] = useState<number>(1), 
 
         [gutterType, setGutterType] = useState<number>(0), 
 
         dimensions = [
-            {name: 'Height №1 :', label: true, value: numbHeight, setValue: setNumbHeight},
-            {name: 'Length №2 :', label: true, value: numbWidth, setValue: setNumbWidth},
-            {name: 'Sheet width :', label: true, value: numbWidthFirst, setValue: setNumbWidthFirst},
-            {name: 'Other width :', label: true, value: numbWidthOther, setValue: setNumbWidthOther},
-            {name: 'Amount :', label: false, value: amount, setValue: setAmount}
+            {name: 'Height №1 :', min: 0, label: true, value: numbHeight, setValue: setNumbHeight},
+            {name: 'Length №2 :', min: 0, label: true, value: numbWidth, setValue: setNumbWidth},
+            {name: 'Sheet width :', min: 0, label: true, value: numbWidthFirst, setValue: setNumbWidthFirst},
+            {name: 'Other width :', min: 0, label: true, value: numbWidthOther, setValue: setNumbWidthOther},
+            {name: 'Amount :', min: 1, label: false, value: amount, setValue: setAmount}
         ],
         [checked0, setChecked0] = useState<boolean>(false),
         [checked1, setChecked1] = useState<boolean>(false),
@@ -102,8 +102,7 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
                 });
                 console.log('sdfsd')
             }
-            let newArr = [],
-            structUnderlay = structUnderl*material.length
+            let newArr = []
 
         for(let i = 0; i < material.length; i++) {
             let nextHeight = ( (i+1) === material.length) ? material[i].width.toFixed(2) : material[i+1].height.toFixed(2);
@@ -111,6 +110,7 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
             console.log(material[i].height.toFixed(2) + ' x ' + nextHeight)
         }
         setResult(newArr)
+        let structUnderlay = structUnderl*newArr.length
 
         let gutters = [] as Array<number>;
         gutters_dimensions.forEach(function (el, i)  {
@@ -122,7 +122,7 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
             structUnderlay = structUnderlay + Number(el.value)
         ))        
         console.log(structUnderlay, addToLength, gutters)
-        setSecondResult([structUnderlay, addToLength, gutters])
+        setSecondResult([structUnderlay, gutters])
     }
 
     return(
@@ -136,7 +136,7 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
                 {dimensions.map((item, index) => (
                     <span className='input_value' key={index}>
                         <h3>{item.name}</h3>
-                        <DemensionInput label={item.label} numb={item.value} setNumb={item.setValue} />
+                        <DemensionInput min={item.min} label={item.label} numb={item.value} setNumb={item.setValue} />
                     </span>
                 ))}                
                 <span className='input_value'>

@@ -18,8 +18,8 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
             console.log(arr)
             let result_page = document.querySelector('.result_page') as any
             result_page.style.display = 'flex'
-            await onButtonClick()
-            result_page.style.display = 'none'
+            // await onButtonClick()
+            // result_page.style.display = 'none'
         }
 
         if(arr.length||arr2.length){
@@ -118,7 +118,7 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                             ))}
                         </section>
                         <footer>
-                            Total: {(middleArr.reduce((partialSum, a) => partialSum + Number(a), 0) / arr.length).toFixed(2)}
+                            Total: {(middleArr.reduce((partialSum, a) => partialSum + Number(a), 0)).toFixed(2)}
                         </footer>
                     </div>
                 </>
@@ -138,9 +138,9 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                                         {item.length ?
                                         <div className='gutter'>
                                             <div>
-                                                <h6>2 x</h6>
+                                                <h6>2 -</h6>
                                                 {item.map((el: number, index: number) => (
-                                                    <h6 key={index}>&nbsp;{el + ' x '}</h6>
+                                                    <h6 key={index}>&nbsp;{el + ' - '}</h6>
                                                 ))}
                                                 <h6>&nbsp;2</h6>
                                             </div>
@@ -154,18 +154,18 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                                     <span className='lists'>
                                         {index === 1 ?
                                             <div>
-                                                {Array.from(Array(arr.length + arr.length*(amount-1)).keys()).map((item) => (
+                                                {Array.from(Array(arr.length*amount - arr.length).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
                                             </div> :
                                         <>
                                             <div>
-                                                {Array.from(Array(arr.length).keys()).map((item) => (
+                                                {Array.from(Array(amount).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
                                             </div>
                                             <div>
-                                                {Array.from(Array(arr.length).keys()).map((item) => (
+                                                {Array.from(Array(amount).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}                                    
                                             </div>                                

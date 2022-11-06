@@ -34,12 +34,12 @@ export default function Modal({modalState, setModalState, gutterType, setGutterT
                         gutterType === 1&&index !== 3 ?
                             <span key={index}>
                                 {item.name}
-                                <DemensionInput label={true} numb={item.value} setNumb={item.setValue} />
+                                <DemensionInput min={0} label={true} numb={item.value} setNumb={item.setValue} />
                             </span> 
                         : gutterType === 0 &&
                             <span key={index}>
                                 {item.name}
-                                <DemensionInput label={true} numb={item.value} setNumb={item.setValue} />
+                                <DemensionInput min={0} label={true} numb={item.value} setNumb={item.setValue} />
                             </span>
                     ))}
                 </div>

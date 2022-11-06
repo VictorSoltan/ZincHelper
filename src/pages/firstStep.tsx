@@ -15,7 +15,7 @@ export default function FirstStep({structUnderl, setStructUnderl} : {structUnder
                 <Select image={Trapeira} selected={true} />
             </div>
             <div className='select_value'>
-                <DemensionInput label={true} numb={structUnderl} setNumb={setStructUnderl} />
+                <DemensionInput min={0} label={true} numb={structUnderl} setNumb={setStructUnderl} />
                 <h3>structural underlay</h3>
             </div>
             <Link to="/second_step" className='blue_button'>Next step</Link>
