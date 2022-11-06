@@ -27,7 +27,7 @@ export default function Menu({menuState, seMenuState} : {menuState: boolean; seM
                 <div className='menu_points'>
                     <h1>Menu</h1>
                     {menu_points.map((item, index) => (
-                        <Link to={item.link} key={index} className={window.location.pathname === item.link ? 'active' : ''}>
+                        <Link onClick={() => seMenuState(false)} to={item.link} key={index} className={window.location.pathname === item.link ? 'active' : ''}>
                             <img src={item.img} alt={item.name} />
                             {item.name}
                         </Link>
