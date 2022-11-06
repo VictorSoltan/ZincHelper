@@ -28,6 +28,12 @@
             right: 8px;
             cursor: pointer;
         }
+        .progress{
+            position: absolute;
+            z-index: 9;
+            top: 58px;
+            left: 120px;
+        }
         .frames{
             display: flex;
             justify-content: space-between;

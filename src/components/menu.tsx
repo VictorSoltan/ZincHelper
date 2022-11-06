@@ -8,6 +8,7 @@ import Filter from '../assets/menu/filter.svg'
 import Info from '../assets/menu/info.svg'
 
 import Logo from '../assets/logo.svg'
+import Progress from '../assets/in_progress.png'
 
 import '../styles/components/menu.scss'
 
@@ -24,6 +25,7 @@ export default function Menu({menuState, seMenuState} : {menuState: boolean; seM
         <div className={menuState ? "menu_component menu_component_active" : "menu_component"}>
             <div className='menu_component_content'>
                 <img src={Close} alt="close" className='close' onClick={() => seMenuState(false)} />
+                <img src={Progress} alt="in progress" className='progress' />
                 <div className='menu_points'>
                     <h1>Menu</h1>
                     {menu_points.map((item, index) => (

@@ -4,6 +4,8 @@ import Logo from '../assets/logo.svg'
 
 import Vector0 from '../assets/result/Vector26.svg'
 import Vector1 from '../assets/result/Vector27.svg'
+import Vector2 from '../assets/result/Vector32.svg'
+
 // import { toPng } from 'html-to-image';
 import html2canvas from "html2canvas";
 import Frame1 from '../assets/Frame2.svg'
@@ -92,7 +94,7 @@ export default function SecondStep({arr, arr2, thirdResult, middleArr, gutterTyp
                                             <h6>№{index+1}  :</h6>
                                             <h6>{item.value + ' x ' + item.value1 }</h6>
                                         </div>
-                                        <img src={index === 0 ? Vector0 : Vector1} alt="" />
+                                        <img src={index === 0 ? Vector0 : index !== arr.length-1 ? Vector1 : Vector2} alt="" />
                                     </span>
                                     <span className='names'>
                                         <h3>Esquerda</h3>
@@ -166,7 +168,7 @@ export default function SecondStep({arr, arr2, thirdResult, middleArr, gutterTyp
                             ))}
                         </section>
                         <footer>
-                            Total: {arr2[0]*arr.length}
+                            Total: {(arr2[0]*arr.length)*amount}
                         </footer>
                     </div>            
                 </>

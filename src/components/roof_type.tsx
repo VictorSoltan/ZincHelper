@@ -6,6 +6,7 @@ import Frame0 from '../assets/trapeira_flat.svg'
 import Frame1 from '../assets/trapeira_circle.svg'
 import Frame2 from '../assets/trapeira_flat_double.svg'
 
+import Progress from '../assets/in_progress_modal.png'
 import '../styles/components/roof_type.scss'
 
 export default function RoofType({roofTypeState, setRoofTypeState, roof_dimensions} : {roofTypeState: boolean; setRoofTypeState: any; roof_dimensions: Array<any>}){
@@ -20,6 +21,7 @@ export default function RoofType({roofTypeState, setRoofTypeState, roof_dimensio
             <div className="background" onClick={() => setRoofTypeState(!roofTypeState)} />
             <section>
                 <img src={Close} alt="close" className='close' onClick={() => setRoofTypeState(!roofTypeState)} />
+                <img src={Progress} alt="progress" className='progress'/>
                 <h2>
                     Roof
                     <span> type:</span>
