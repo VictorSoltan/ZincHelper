@@ -114,7 +114,7 @@ export default function SecondStep({arr, arr2, thirdResult, middleArr, gutterTyp
                             ))}
                         </section>
                         <footer>
-                            Total: {(middleArr.reduce((partialSum, a) => partialSum + Number(a), 0)).toFixed(2)}
+                            Total: {Number((middleArr.reduce((partialSum, a) => partialSum + Number(a), 0)).toFixed(2))*amount}
                         </footer>
                     </div>
                 </>
@@ -166,7 +166,7 @@ export default function SecondStep({arr, arr2, thirdResult, middleArr, gutterTyp
                             ))}
                         </section>
                         <footer>
-                            Total: {(arr2[0]*arr.length)*amount}
+                            Total: {arr2[0]*arr.length}
                         </footer>
                     </div>            
                 </>
