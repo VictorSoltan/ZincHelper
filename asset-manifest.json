@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ZincHelper/static/css/main.aec5b536.css",
-    "main.js": "/ZincHelper/static/js/main.629d2783.js",
+    "main.css": "/ZincHelper/static/css/main.e60fdf44.css",
+    "main.js": "/ZincHelper/static/js/main.d9d66253.js",
     "static/js/787.3a7baf21.chunk.js": "/ZincHelper/static/js/787.3a7baf21.chunk.js",
     "static/media/info.svg": "/ZincHelper/static/media/info.b304d6bd6d1c49b4e550445aa526a857.svg",
     "static/media/En.svg": "/ZincHelper/static/media/En.179cf8f5acc8a4a254ef61196e700fa2.svg",
@@ -28,14 +28,15 @@
     "static/media/burger1.svg": "/ZincHelper/static/media/burger1.0013527f246fa642afbae15574cc81ca.svg",
     "static/media/burger3.svg": "/ZincHelper/static/media/burger3.e5e754b58965330944ee15539cd1064d.svg",
     "static/media/Vector27.svg": "/ZincHelper/static/media/Vector27.cb2690a31dc92980b1eb3588eef94ae3.svg",
+    "static/media/Vector32.svg": "/ZincHelper/static/media/Vector32.99cecccb9db1cbb8a562777efa6d52ce.svg",
     "static/media/Vector26.svg": "/ZincHelper/static/media/Vector26.90780396b965dc1f8fb57c41d43ee07b.svg",
     "static/media/burger2.svg": "/ZincHelper/static/media/burger2.55b955c4f574a2c8d17fd80aff19d2ff.svg",
-    "main.aec5b536.css.map": "/ZincHelper/static/css/main.aec5b536.css.map",
-    "main.629d2783.js.map": "/ZincHelper/static/js/main.629d2783.js.map",
+    "main.e60fdf44.css.map": "/ZincHelper/static/css/main.e60fdf44.css.map",
+    "main.d9d66253.js.map": "/ZincHelper/static/js/main.d9d66253.js.map",
     "787.3a7baf21.chunk.js.map": "/ZincHelper/static/js/787.3a7baf21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aec5b536.css",
-    "static/js/main.629d2783.js"
+    "static/css/main.e60fdf44.css",
+    "static/js/main.d9d66253.js"
   ]
 }
