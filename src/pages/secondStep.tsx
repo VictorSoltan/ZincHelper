@@ -102,13 +102,14 @@ export default function SecondStep({structUnderl} : {structUnderl: number}){
         setResult(newArr)
 
         let gutters = 0 as number;
-        gutters_dimensions.forEach(el => (
-            gutters = gutters + el.value
-        ))
+        gutters_dimensions.forEach(function (el, i)  {
+            if((gutterType === 1 && i !== 3) || gutterType === 0 ){
+                gutters = gutters + el.value
+            }
+        })
         roof_dimensions.forEach(el => (
             structUnderlay = structUnderlay + Number(el.value)
         ))        
-        console.log(structUnderlay)
         console.log(gutters)
         setSecondResult([structUnderlay, gutters])
     }
