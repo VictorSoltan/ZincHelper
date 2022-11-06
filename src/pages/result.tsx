@@ -10,7 +10,7 @@ import Frame1 from '../assets/Frame2.svg'
 import Frame2 from '../assets/Frame3.svg'
 
 import '../styles/pages/result.scss'
-export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array<any>, arr2: Array<any>, gutterType: number, amount: number}){
+export default function SecondStep({arr, arr2, thirdResult, gutterType, amount} : {arr: Array<any>, arr2: Array<any>, thirdResult: Array<number>, gutterType: number, amount: number}){
     const [middleArr, setMiddleArr] = useState<Array<any>>([])
 
     useEffect(() => {
@@ -104,12 +104,12 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                                     </span>
                                     <span className='lists'>
                                         <div>
-                                            {Array.from(Array(arr.length).keys()).map((item) => (
+                                            {Array.from(Array(amount).keys()).map((item) => (
                                                 <h6 key={item}>{item + 1}</h6>
                                             ))}
                                         </div>
                                         <div>
-                                            {Array.from(Array(arr.length).keys()).map((item) => (
+                                            {Array.from(Array(amount).keys()).map((item) => (
                                                 <h6 key={item}>{item  + 1}</h6>
                                             ))}                                    
                                         </div>
@@ -152,24 +152,19 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                                         </>}
                                     </span>
                                     <span className='lists'>
-                                        {index === 1 ?
+                                        {index === arr2.length-1 ?
                                             <div>
-                                                {Array.from(Array(arr.length*amount - arr.length).keys()).map((item) => (
+                                                {Array.from(Array(arr.length-1).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
-                                            </div> :
-                                        <>
+                                            </div> 
+                                        :
                                             <div>
-                                                {Array.from(Array(amount).keys()).map((item) => (
+                                                {Array.from(Array(1).keys()).map((item) => (
                                                     <h6 key={item}>{item + 1}</h6>
                                                 ))}
-                                            </div>
-                                            <div>
-                                                {Array.from(Array(amount).keys()).map((item) => (
-                                                    <h6 key={item}>{item + 1}</h6>
-                                                ))}                                    
-                                            </div>                                
-                                        </>}
+                                            </div>                              
+                                        }
                                     </span>
                                 </div>
                             ))}
@@ -180,6 +175,38 @@ export default function SecondStep({arr, arr2, gutterType, amount} : {arr: Array
                     </div>            
                 </>
             }
+                <div className='stats3'>
+                    <section>
+                        {[thirdResult].map((item, index) => (
+                            <div className='item' key={index} style={{background: index%2===0 ? '#F7EBEB' : 'rgba(125, 170, 211, 0.5)' }}>
+                                <span className='values'>
+                                    {item.length ?
+                                    <div className='gutter'>
+                                        <div>
+                                            <h6>2 -</h6>
+                                            {item.map((el: number, index: number) => (
+                                                <h6 key={index}>&nbsp;{el + ' - '}</h6>
+                                            ))}
+                                            <h6>&nbsp;2</h6>
+                                        </div>
+                                        <img src={gutterType === 0 ? Frame1 : Frame2} alt="" />
+                                    </div>
+                                    : <>
+                                        <h6>{item}</h6>
+                                        <img src={index === 0 ? Vector0 : Vector1} alt="" />
+                                    </>}
+                                </span>
+                                <span className='lists'>
+                                        <div>
+                                            {Array.from(Array(amount).keys()).map((item) => (
+                                                <h6 key={item}>{item + 1}</h6>
+                                            ))}
+                                        </div> 
+                                </span>
+                            </div>
+                        ))}
+                    </section>
+                </div>                    
             <img src={Logo} alt="Logo" className='logo' />
         </div>
     )

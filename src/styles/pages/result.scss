@@ -23,7 +23,7 @@
         padding-bottom: 30px;
         border-bottom: 3px solid #000000;
     }
-    .stats, .stats2{
+    .stats, .stats2, .stats3{
         width: 473px;
         margin: 35px 0;
         header{
@@ -55,7 +55,7 @@
             .item{
                 display: flex;
                 align-items: center;                    
-                padding: 6px 12px;
+                padding: 10px 12px;
                 width: calc(100% - 16px);                
                 span{
                     position: relative;
@@ -142,7 +142,8 @@
             line-height: 15px;                                    
         }
     }
-    .stats2{
+    .stats2, .stats3{
+        margin: 35px 0 0 0;
         header{
             h2{
                 &:nth-child(2){
@@ -171,7 +172,9 @@
             margin-left: 60px;
         }
     }
-
+    .stats3{
+        margin: 0;
+    }
     .logo{
         position: absolute;
         bottom: 34px;
